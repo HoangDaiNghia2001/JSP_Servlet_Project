@@ -1,0 +1,403 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');*/
+
+:root {
+    --primary-color: rgb(251, 56, 59);
+    --black: rgb(17, 17, 17);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+/* slides */
+.slider.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 0);
+}
+
+.img-slide.active {
+    clip-path: circle(150% at 0 0);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+.slider .slogan {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    display: none;
+}
+
+.slider .slogan.active {
+    display: block;
+}
+
+.slider .slogan h1 {
+    font-size: 120px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.slider .slogan p {
+    letter-spacing: 10px;
+    word-spacing: 20px;
+    text-align: center;
+}
+
+.slider-navigation {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-navigation .nav-btn {
+    padding: 8px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.media-icons {
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translateX(-50%);
+    color: rgb(224, 223, 223);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.media-icons i {
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+.media-icons i:hover {
+    color: var(--primary-color)
+}
+
+/* space */
+
+.space {
+    width: 100%;
+    height: 5px;
+    background-color: var(--white);
+}
+
+/* body */
+/* downshifter */
+/* sneaker */
+.body__downshifter,
+.body__sneaker {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.body__downshifter-first {
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.body__downshifter-first img,
+.body__downshifter-second-img img,
+.body__sneaker-item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+.body__downshifter-first img:hover{
+    transform: scale(1.1);
+}
+
+.body__downshifter-second,
+.body__sneaker-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.body__downshifter-second-describe,
+.body__sneaker-item__describe {
+    flex: 1;
+    background-color: var(--primary-color);
+    padding: 110px 75px;
+}
+
+.body__sneaker-item__describe-black {
+    flex: 1;
+    background-color: var(--black);
+    padding: 110px 75px;
+}
+
+.body__downshifter-second-describe>h1,
+.body__sneaker-item__describe>h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.body__sneaker-item__describe-black>h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px rgb(204, 204, 204);
+}
+
+.body__downshifter-second-describe>p,
+.body__sneaker-item__describe>p,
+.body__sneaker-item__describe-black>p {
+    color: #fee6e6;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.body__downshifter-second-describe>button,
+.body__sneaker-item__describe>button {
+    padding: 8px 18px;
+    border: none;
+    outline: none;
+    background-color: var(--black);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.7s;
+}
+
+.body__sneaker-item__describe-black>button {
+    padding: 8px 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.7s;
+}
+
+.body__downshifter-second-describe>button>a,
+.body__sneaker-item__describe>button>a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.body__sneaker-item__describe-black>button>a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.body__downshifter-second-describe>button:hover,
+.body__sneaker-item__describe>button:hover,
+.body__sneaker-item__describe-black>button:hover {
+    transform: scale(0.9);
+    background-color: var(--white);
+}
+
+.body__downshifter-second-describe>button:hover a,
+.body__sneaker-item__describe>button:hover a,
+.body__sneaker-item__describe-black>button:hover a {
+    color: var(--black);
+}
+
+.body__downshifter-second-img,
+.body__sneaker-item__img {
+    flex: 1;
+    position: relative;
+}
+
+.body__downshifter-second-img h2,
+.body__sneaker-item__img h2 {
+    position: absolute;
+    top: 14%;
+    left: 8%;
+    color: var(--white);
+    font-size: 30px;
+    text-shadow: 2px 2px 12px #000;
+}
+
+/* trusted-partners */
+.trusted-partners{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    border-top: 1px solid rgb(168, 168, 168);
+}   
+
+.trusted-partners__title{
+    margin: auto;
+    font-size: 20px;
+    color: #0000004D;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    margin-bottom: 20px;
+}   
+
+.trusted-partners__img{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trusted-partners__img-item{
+    width: 15%;
+    height: 100%;
+}
+
+.trusted-partners__img-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* login */
+.login {
+    padding: 40px 180px;
+    border-top: 1px solid var(--black);
+}
+
+.login>form {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.login h1 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    margin: auto 0px;
+}
+
+.login__item {
+    display: flex;
+    width: 570px;
+
+}
+
+.login__input {
+    height: 100%;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    /* justify-items: space-between; */
+}
+
+.login__input>input {
+    padding: 8px 10px;
+    border: 1px solid #c4c2c2;
+    border-right: none !important;
+    outline: none;
+}
+
+.login__input>input:first-child {
+    border-radius: 5px 0px 0px 0px;
+    margin-bottom: 1px;
+}
+
+.login__input>input:last-child {
+    border-radius: 0px 0px 0px 5px;
+}
+
+.login__input>input::placeholder {
+    letter-spacing: 2px;
+    color: #a3a1a1;
+}
+
+.login__submit {
+    position: relative;
+    flex: 1;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.login__submit>button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 16px;
+    letter-spacing: 2px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login__submit>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--black);
+    transition: 0.3s;
+}
+
+.login__submit:hover span {
+    height: 100%;
+}
+
+.login__submit:hover button {
+    color: var(--primary-color);
+}

@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --reds: #fc1404;
+    --yellows: #ffd902;
+    --greens: #1a770b;
+    --grey: #e7e7e7;
+    --blue: #029eb9;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+}
+
+.click{
+    border: 1px solid rgb(168, 168, 168) !important;
+    border-radius: 5px;
+}
+
+.manager {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.manage-slidebar {
+    width: 18%;
+
+}
+
+.manage-slidebar>ul {
+    margin-top: 0px;
+    list-style: none;
+    border: 1px solid var(--grey);
+}
+
+.manage-slidebar>ul>li:first-child {
+    background-color: var(--black);
+}
+
+.manage-slidebar>ul>li:first-child {
+    padding: 19px;
+}
+
+.manage-slidebar>ul>li:first-child>a {
+    font-size: 25px !important;
+    color: var(--reds);
+    letter-spacing: 1.5px;
+    font-style: italic;
+    text-shadow: 0px 0px 9px var(--white);
+    transition: 0.4s;
+}
+
+.manage-slidebar>ul>li>a:hover {
+    color: var(--reds);
+
+}
+
+.manage-slidebar>ul>li:not(:last-child) {
+    border-bottom: 1px solid var(--grey);
+}
+
+.manage-slidebar>ul>li {
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--reds);
+}
+
+.manage-slidebar>ul>li>a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+li > form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--grey);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+li > form > input{
+    width: 75%;
+    text-align: center;
+    padding: 7px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+li > form > button{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    outline: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+li > form > button:hover{
+    background-color: var(--reds);
+}
+
+.amount-pro{
+    border: 1px solid var(--grey);
+    margin-top: 25px;
+}
+
+.amount-pro > p:first-child{
+    background-color: rgb(228, 228, 228);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+.amount-pro__item{
+    display: flex;
+    padding: 6px 20px;
+    border-bottom: 1px solid var(--grey);
+}
+
+.amount-pro__item:last-child{
+    border: none !important;
+}
+
+.amount-pro__item > p{
+    min-width: 100px;
+    color: #444;
+}
+
+.amount-pro__item > span{
+    font-weight: bold;
+    color: #555;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--black);
+}
+
+thead>tr>th {
+    padding: 15px 30px !important;
+}
+
+th {
+    padding: 16px;
+}
+
+tbody>tr {
+    border: 1px solid var(--grey);
+    text-align: center;
+}
+
+tbody>tr:first-child {
+    border-top: 1px solid var(--yellows);
+    font-size: 18px;
+    height: 54px !important;
+}
+
+tbody>tr:nth-child(2n) {
+    background-color: #f3f3f3;
+}
+
+tr>td:first-child {
+    width: 5%;
+}
+
+tr>td:nth-child(2) {
+    width: 10%;
+}
+
+tr>td:nth-child(3) {
+    width: 35%;
+    font-size: 18px;
+}
+
+tr>td:nth-child(5) {
+    width: 12%;
+}
+
+td {
+    padding: 10px;
+}
+
+td:last-child>button {
+    font-size: 20px;
+    margin: 0px 5px;
+    transition: 0.3s;
+    color: var(--yellows);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.delete>i {
+    color: var(--reds);
+}
+
+.change:hover {
+    text-shadow: 0px 0px 9px var(--yellows);
+}
+
+.delete:hover {
+    text-shadow: 0px 0px 9px var(--reds);
+}
+
+.img-product {
+    width: 240px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.img-product>img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tb-header {
+    text-align: left;
+    font-size: 30px;
+}
+
+.tb-header>a {
+    text-decoration: none;
+    color: var(--reds);
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    text-shadow: 0px 0px 9px var(--white);
+    transition: 0.5s;
+    vertical-align: middle;
+}
+
+.tb-header>a:hover,
+.manage-slidebar>ul>li:first-child>a:hover{
+    color: var(--yellows);
+}
+
+.manager-action {
+    float: right;
+    display: flex;
+}
+
+/*.manager-action>a:last-child {
+    margin-left: 20px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}*/
+
+.manager-action>button,
+.manager-action > form > button{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--reds);
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    padding: 6px 18px;
+    border: 1px solid var(--reds);
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.manager-action>button {
+    margin-left: 20px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+/*.manager-action>a:hover {
+    background-color: transparent;
+    color: var(--reds);
+    box-shadow: 0px 0px 6px 4px var(--reds);
+}*/
+
+.manager-action > form > button:hover {
+    background-color: transparent;
+    color: var(--reds);
+    box-shadow: 0px 0px 6px 4px var(--reds);
+}
+
+.manager-action>button:last-child:hover {
+    background-color: transparent;
+    color: var(--blue);
+    box-shadow: 0px 0px 6px 4px var(--blue);
+}
+
+.manager-action > form > button{
+    height: 100%;
+    padding: 0px 15px;
+    cursor: pointer;
+    outline: none;
+    font-family: "Poppins";
+}
+
+/* next */
+
+.next-page {
+
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.next-page>a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.4s;
+    vertical-align: middle;
+    padding: 2px 6px;
+    border: 1px solid transparent;
+}
+
+.click{
+    border: 1px solid rgb(168, 168, 168) !important;
+    border-radius: 5px;
+}
+
+
+
+.next-page>a>i {
+    color: rgb(94, 94, 94);
+    transition: 0.4s;
+    cursor: pointer;
+    margin: auto;
+}
+
+.next-page>a:hover {
+    font-weight: bold;
+}
+
+.next-page>a:hover,
+.next-page>a:hover>i {
+    color: var(--reds);
+    transform: scale(1.1);
+}
+
+.active{
+    color: var(--reds) !important;
+}
+
+.question{
+    position: fixed;
+    top: 0;
+    /*    left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    animation: show 0.2s linear;
+
+}
+
+.question-item{
+    width: 570px;
+    height: 100px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 5px;
+    margin:0px auto;
+    /*animation: showModal 0.5s linear;*/
+}
+
+.question-item > p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--reds);
+}
+
+.question-item > button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+
+.question-item > a,
+.question-item > button{
+    font-size: 18px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.4s;
+}
+
+.question-item > a:hover,
+.question-item > button:hover{
+    color: var(--reds);
+    font-weight: bold;
+}
+
+@keyframes showModal {
+    from {
+        transform: translateY(-100vh);
+    }
+
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes hideModal {
+    from {
+        transform: translateY(0vh);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* add-new-pro
+change-inf */
+.add-pro,
+.change-pro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 800;
+    display: flex;
+    padding-top: 50px;
+    display: none;
+    animation: show 0.2s linear;
+}
+
+.add-pro>form,
+.change-pro>form {
+    width: 450px;
+    height: 650px;
+    background-color: var(--white);
+    margin: 0px auto;
+    box-shadow: 0px 0px 14px 9px var(--white);
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
+.add-pro>form>p,
+.change-pro>form>p {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.change-pro>form>p {
+    margin-bottom: 15px;
+}
+
+.add-pro__item{
+    margin-bottom: 15px;
+}
+
+.change-pro__item{
+    margin-bottom: 10px;
+}
+
+.add-pro__item:focus-within>p
+{
+    color: var(--blue);
+}
+
+.change-pro__item:focus-within>p{
+    color: var(--yellows);
+}
+
+.add-pro__item:focus-within>input,
+.add-pro__item:focus-within>select,
+.add-pro__item:focus-within>textarea {
+    border-bottom: 1px solid var(--blue);
+}
+
+.change-pro__item:focus-within>input,
+.change-pro__item:focus-within>select,
+.change-pro__item:focus-within>textarea{
+    border-bottom: 1px solid var(--yellows);
+}
+
+.add-pro__item:focus-within>input {
+    padding: 10px 0px;
+}
+
+.change-pro__item:focus-within>input {
+    padding: 7px 0px;
+}
+
+.add-pro__item>p,
+.change-pro__item>p {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+    transition: 0.4s;
+}
+
+.change-pro__item>p {
+    text-align: left;
+    font-size: 18px;
+}
+
+.add-pro__item>input,
+.add-pro__item>textarea,
+.add-pro__item>select,
+.change-pro__item>input,
+.change-pro__item>textarea,
+.change-pro__item>select {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #666;
+    font-size: 17px;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.change-pro__item>input,
+.change-pro__item>textarea,
+.change-pro__item>select{
+    font-size: 15px;
+}
+
+.add-pro__item>select {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.change-pro__item>select{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.add-pro-action,
+.change-pro-action {
+    padding: 0px 90px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.add-pro-action>button,
+.change-pro-action>button {
+    min-width: 90px;
+    padding: 5px 0px;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    font-family: "Poppins";
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add-pro-action>button:first-child,
+.change-pro-action>button:first-child {
+    border: 1px solid var(--reds);
+    color: var(--reds);
+    border-radius: 3px;
+}
+
+.add-pro-action>button:first-child:hover,
+.change-pro-action>button:first-child:hover {
+    box-shadow: 0px 0px 5px 3px var(--reds);
+    transform: scale(0.9);
+}
+
+.add-pro-action>button:last-child {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 3px;
+}
+
+.add-pro-action>button:last-child:hover {
+    box-shadow: 0px 0px 5px 3px var(--blue);
+    transform: scale(0.9);
+}
+
+.change-pro-action>button:last-child{
+    border: 1px solid var(--yellows);
+    color: var(--yellows);
+    border-radius: 3px;
+}
+
+.change-pro-action>button:last-child:hover {
+    box-shadow: 0px 0px 5px 3px var(--yellows);
+    transform: scale(0.9);
+}
+
+.show {
+    display: block;
+}

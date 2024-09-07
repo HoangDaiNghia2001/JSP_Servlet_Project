@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root {
+    --primary-color: #fb383b;
+    --black: rgb(17, 17, 17);
+    --white: #fff;
+    --grey: rgb(231, 231, 231);
+    --yellow: #f7a02f;
+    --green: #42ff08;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+.sigle {
+    width: 100%;
+    padding: 50px 150px;
+}
+
+.brand {
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.brand>p>a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--black);
+    transition: 0.4s;
+}
+
+.brand>p>a:hover{
+    color: var(--primary-color);
+}
+
+.body-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body-image {
+    flex: 1.2;
+    margin-right: 20px;
+    padding: 20px 25px;
+    border: 1px solid var(--grey);
+}
+
+.image {
+    width: 100%;
+    height: 94%;
+    overflow: hidden;
+}
+
+.image>img,
+.modal-body >img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.image-zoom {
+    margin-top: 15px;
+    display: flex;
+}
+
+.image-zoom>p {
+    font-size: 20px;
+    color: var(--black);
+    margin: auto;
+    transition: 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.image-zoom>p:hover {
+    color: var(--primary-color);
+}
+
+.add-to-cart {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px 25px;
+    border: 1px solid var(--grey);
+
+}
+
+.cart-product-infor {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-product-infor>p {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: var(--primary-color);
+    font-weight: 600;
+
+}
+
+.cart-product-infor>p:first-child {
+    font-size: 34px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group>label,
+.desciption-title>p,
+.amount-title >p{
+    color: var(--black);
+    font-size: 22px;
+}
+
+.custom-select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 18px;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group>input {
+    width: 80%;
+    text-align: center;
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 18px;
+    padding: 8px 0px;
+}
+
+.input-group-item>button {
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    color: var(--white);
+}
+
+.input-group-item>button {
+    background-color: var(--green);
+}
+
+.input-group-item.plus>button {
+    background-color: var(--primary-color);
+}
+
+.input-group-item>button>i {
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.4s;
+
+}
+
+.input-group-item>button:hover {
+    background-color: var(--black);
+}
+
+.input-group-item>button:hover>i {
+    color: var(--yellow);
+}
+
+.form-group.cart {
+    margin: 15px 0px;
+    position: relative;
+    display: flex;
+    background-color: var(--black);
+    padding: 10px 0px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.form-group.cart::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: var(--yellow);
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.form-group.cart:hover {
+    transform: scale(0.9);
+}
+
+.form-group.cart:hover button {
+    color: var(--black);
+}
+
+.form-group.cart:hover::before {
+    height: 1000%;
+}
+
+.add-product {
+    margin: auto;
+    width: 500px;
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.add-product > i {
+    margin-right: 10px;
+}
+
+.product_rassurance {
+    border: 1px solid var(--grey);
+    padding: 20px;
+}
+
+.list-inline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.list-inline-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+    font-size: 20px;
+    color: #6c757d;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.list-inline-item>i {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.list-inline-item:hover {
+    color: var(--black);
+}
+
+.desciption-title,
+.amount-title{
+    margin-bottom: 10px;
+}
+
+.amount-title > p >span{
+    font-weight: bold;
+}
+
+.desciption-body>p {
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.featured-products {
+    margin-top: 50px;
+}
+
+.featured-products-title{
+    margin-bottom: 30px;
+}
+
+.featured-products-title > h2{
+    text-transform: uppercase;
+    font-size: 23px;
+    color: #333;
+    letter-spacing: 1.5px;
+}
+
+.featured-products-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-products-list-item {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    padding: 15px;
+    border: 1px solid var(--grey);
+    margin-bottom: 20px;
+}
+
+.featured-products-list-item-img {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.featured-products-list-item-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.quick-view {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+    width: 150px;
+    padding: 8px 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    outline: none;
+    color: var(--white);
+    transition: 0.5s;
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+    animation: showQuick 0.5s linear;
+}
+
+.quick-view>a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.quick-view:hover {
+    background-color: rgba(253, 20, 20, 0.7);
+    color: var(--black);
+}
+
+@keyframes showQuick {
+    from {
+        opacity: 0;
+        top: 0%;
+    }
+
+    to {
+        opacity: 1;
+        top: 60%;
+    }
+}
+
+.featured-products-list-item-img:hover button,
+.last-product__img:hover button {
+    display: block;
+}
+
+.product-name {
+    min-height: 50px;
+    border-bottom: 1px solid var(--grey);
+    text-align: center;
+    margin: 15px 0px 10px 0px;
+
+}
+
+.product-name>h3 {
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.featured-products-list-item__buy {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.featured-products-list-item__buy-price>h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.featured-products-list-item__buy-price__start>i {
+    font-size: 10px;
+}
+
+.featured-products-list-item__buy-cart {
+    padding: 0px 12px;
+    background-color: var(--black);
+    display: flex;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.featured-products-list-item__buy-cart>i {
+    margin: auto;
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.featured-products-list-item__buy-cart:hover {
+    background-color: var(--primary-color);
+}
+
+
+.showImage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: flex;
+    display: none;
+    animation: show 0.2s linear;
+}
+
+.action{
+    display: block;
+
+}
+
+.modal{
+    width: 550px;
+    height: 650px;
+    margin: 50px auto 0px auto;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    background-color: #2e2e2e;
+    z-index: 1000;
+}
+
+.modal-header{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    font-size: 30px;
+    align-items: center;
+    line-height: 1.4;
+    color: var(--white);
+}
+
+.modal-header > i{
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-left: 20px;
+}
+
+.modal-header > i:hover{
+    color: var(--primary-color);
+}
+
+.modal-body{
+    width: 100%;
+    height: 78%;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.modal-body:hover > img{
+    transform: scale(1.1);
+}
+
+.modal-footer{
+    display: flex;
+    margin-top: 20px;
+}
+
+.modal-footer > p{
+    margin: auto;
+    color: var(--white);
+    font-size: 25px;
+    font-style: italic;
+}
+
+.modal-footer > p > span{
+    color: var(--primary-color);
+}
+
+@keyframes showModal{
+    from{
+        transform: translateY(-100vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes hideModal{
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.load-more-other-product{
+    margin-bottom: 15px;
+}
+
+.load-more-other-product>button {
+    position: relative;
+    width: 120px;
+    height: 35px;
+    background-color: var(--black);
+    position: relative;
+    border: none;
+    outline: none;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.load-more-other-product>button>p {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 35px;
+    transition: 0.5s;
+}
+
+.load-more-other-product>button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    background-color: var(--yellow);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.load-more-other-product>button:hover{
+    transform: scale(0.9);
+}
+
+.load-more-other-product>button:hover::before {
+    height: 400%;
+}

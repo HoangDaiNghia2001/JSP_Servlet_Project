@@ -1,0 +1,154 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");*/
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #fa2530;
+  --yellow: #f7a02f;
+  --green: #66fc4f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins";
+  display: flex;
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  margin: auto;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 35px;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  padding: 0px 10px;
+  line-height: 35px;
+}
+
+.header > span {
+  padding: 0px 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.header > span:first-child {
+  background-color: var(--red);
+}
+
+.header > span:nth-child(2) {
+  background-color: var(--yellow);
+}
+
+.header > span:last-child {
+  background-color: var(--green);
+}
+
+.body {
+  width: 400px;
+  background-color: #f26c4f;
+  margin: 25px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body > h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--white);
+  font-style: italic;
+  letter-spacing: 8px;
+  font-size: 60px;
+  font-family: "Brush Script MT";
+  font-weight: 500;
+}
+
+.body > h2 {
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  color: var(--black);
+  font-style: italic;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  font-size: 24px;
+}
+
+.body > button {
+  margin: auto;
+  padding: 8px 25px;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.body > button:hover {
+  transform: scale(0.9);
+  box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8),
+    0 6px 20px 0 rgba(255, 255, 255, 0.8);
+}
+
+.body > button > a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.body > h3 {
+  margin: 20px 0px;
+  text-align: center;
+  color: var(--white);
+  font-style: italic;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.body__icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 100px 20px 100px;
+}
+
+.body__icon-item {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.body__icon-item:hover i {
+  color: var(--black);
+}
+
+.body__icon-item:hover{
+  box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8),
+  0 6px 20px 0 rgba(255, 255, 255, 0.8);
+}
+
+.body__icon-item > i {
+  color: var(--white);
+  transition: 0.5s;
+}
